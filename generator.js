@@ -125,3 +125,29 @@ function copyKey9() {
 
   navigator.clipboard.writeText(copyText.value);
 } 
+
+function myRandomKeyAndCopy(){
+
+  let myArray = []
+  for(let i = 0; i < 11; i++){
+    let randomSet_1 = makeid(5)
+    let randomSet_2 = makeid(5)
+    let randomSet_3 = makeid(5)
+    let randomSet_4 = makeid(5)
+    let randomSet_5 = makeid(5)
+  
+    myArray.push(randomSet_1+"-"+randomSet_2+"-"+randomSet_3+"-"+randomSet_4+"-"+randomSet_5 + "\r\n")
+  }
+  
+  document.getElementById("myInputCopy").value = myArray[0]
+  }
+
+  function copyKeyHere() {
+
+    var copyText = document.getElementById("myInputCopy");
+  
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+  
+    navigator.clipboard.writeText(copyText.value);
+  } 
